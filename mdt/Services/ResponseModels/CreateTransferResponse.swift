@@ -30,7 +30,12 @@ extension CreateTransferResponse {
         if (status == "success") {
             guard (transactionId != nil) else { return false}
             guard (amount != nil) else { return false }
+            guard (description != nil) else { return false }
+            guard (recipientAccount != nil) else { return false }
             
+            return true
+        } else {
+            return false
         }
     }
 }

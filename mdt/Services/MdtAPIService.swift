@@ -38,21 +38,28 @@ class MdtAPIService: APICaller {
         call(HTTPType.POST, with: reqUrl, requestBody: reqData, completion: completion)
     }
     
-    func readBalance(completion: @escaping (ReadBalanceResponse) -> Void) {
+    func readBalance(token: String, completion: @escaping (ReadBalanceResponse) -> Void) {
         guard let reqUrl = URL(string: super.url + Endpoint.readBalance.rawValue) else { return }
         
-        call(HTTPType.GET, with: reqUrl, requestBody: EmptyData(), completion: completion)
+        call(HTTPType.GET, with: reqUrl, requestHeaders: ["Authorization": token], requestBody: EmptyData(), completion: completion)
     }
     
-    func readPayees(completion: @escaping (ReadPayeesResponse) -> Void) {
+    func readPayees(token: String, completion: @escaping (ReadPayeesResponse) -> Void) {
         guard let reqUrl = URL(string: super.url + Endpoint.readPayees.rawValue) else { return }
         
-        call(HTTPType.GET, with: reqUrl, requestBody: EmptyData(), completion: completion)
+        call(HTTPType.GET, with: reqUrl, requestHeaders: ["Authorization": token], requestBody: EmptyData(), completion: completion)
     }
     
-    func readTransactions(completion: @escaping (ReadTransactionsResponse) -> Void) {
+    func readTransactions(token: String, completion: @escaping (ReadTransactionsResponse) -> Void) {
         guard let reqUrl = URL(string: super.url + Endpoint.readTransactions.rawValue) else { return }
         
-        call(HTTPType.GET, with: reqUrl, requestBody: EmptyData(), completion: completion)
+        call(HTTPType.GET, with: reqUrl, requestHeaders: ["Authorization": token], requestBody: EmptyData(), completion: completion)
     }
+    
+//    func createTransfer(token: String, transferDetails: TransferDetails, completion: @escaping (CreateTransferResponse) -> Void) {
+//        let reqData = CreateRegistrationData(username: transferDetails.username, password: transferDetails.password)
+//        guard let reqUrl = URL(string: super.url + Endpoint.createTransfer.rawValue) else { return }
+//
+//        call(HTTPType.POST, with: reqUrl, requestBody: reqData, completion: completion)
+//    }
 }

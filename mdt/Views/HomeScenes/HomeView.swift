@@ -12,6 +12,18 @@ struct HomeView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var globalStates: GlobalStates
     
+    func fillBalance() -> Void {
+        guard globalStates.APIToken != nil else { return self.presentationMode.wrappedValue.dismiss() }
+        
+        MdtAPIService.shared.readBalance(token: globalStates.APIToken!) { response in
+            if (response.isSuccessful()) {
+                balance = response.balance!
+            } else {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        }
+    }
+    
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
@@ -26,9 +38,7 @@ struct HomeView: View {
         .navigationBarTitle("")
         .navigationBarHidden(true)
         .background(Theme.base.mainColor)
-        .onAppear {
-            
-        }
+        .onAppear(perform: fillBalance)
     }
 }
 

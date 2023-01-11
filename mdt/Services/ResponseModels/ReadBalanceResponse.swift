@@ -10,7 +10,7 @@ import Foundation
 struct ReadBalanceResponse: Codable {
     let status: String
     let accountNo: String?
-    let balance: Int?
+    let balance: Double?
     let error: String?
     
     enum CodingKeys: String, CodingKey {

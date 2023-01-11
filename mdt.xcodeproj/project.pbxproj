@@ -24,6 +24,7 @@
 		8A4D3F8A296E5A1800848823 /* ViewUsageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F89296E5A1800848823 /* ViewUsageError.swift */; };
 		8A4D3F8C296E6AF400848823 /* EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F8B296E6AF400848823 /* EmptyData.swift */; };
 		8A4D3F8E296E6D5900848823 /* CreateTransferResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F8D296E6D5900848823 /* CreateTransferResponse.swift */; };
+		8A4D3F90296EAE1B00848823 /* ResponseState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F8F296EAE1B00848823 /* ResponseState.swift */; };
 		8AB8A73B2965822F00917FDC /* mdtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A73A2965822F00917FDC /* mdtApp.swift */; };
 		8AB8A73D2965822F00917FDC /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AB8A73C2965822F00917FDC /* PreviewView.swift */; };
 		8AB8A73F2965823000917FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AB8A73E2965823000917FDC /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		8A4D3F89296E5A1800848823 /* ViewUsageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUsageError.swift; sourceTree = "<group>"; };
 		8A4D3F8B296E6AF400848823 /* EmptyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyData.swift; sourceTree = "<group>"; };
 		8A4D3F8D296E6D5900848823 /* CreateTransferResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTransferResponse.swift; sourceTree = "<group>"; };
+		8A4D3F8F296EAE1B00848823 /* ResponseState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseState.swift; sourceTree = "<group>"; };
 		8AB8A7372965822F00917FDC /* mdt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mdt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AB8A73A2965822F00917FDC /* mdtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mdtApp.swift; sourceTree = "<group>"; };
 		8AB8A73C2965822F00917FDC /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				8A363937296D1191006FBC96 /* APICaller.swift */,
+				8A4D3F8F296EAE1B00848823 /* ResponseState.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -351,6 +354,8 @@
 			dependencies = (
 			);
 			name = mdt;
+			packageProductDependencies = (
+			);
 			productName = mdt;
 			productReference = 8AB8A7372965822F00917FDC /* mdt.app */;
 			productType = "com.apple.product-type.application";
@@ -369,6 +374,8 @@
 				8AB8A7492965823000917FDC /* PBXTargetDependency */,
 			);
 			name = mdtTests;
+			packageProductDependencies = (
+			);
 			productName = mdtTests;
 			productReference = 8AB8A7472965823000917FDC /* mdtTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -423,6 +430,8 @@
 				Base,
 			);
 			mainGroup = 8AB8A72E2965822F00917FDC;
+			packageReferences = (
+			);
 			productRefGroup = 8AB8A7382965822F00917FDC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -465,6 +474,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A4D3F90296EAE1B00848823 /* ResponseState.swift in Sources */,
 				8AB8A7BF29681BE500917FDC /* PreviewContentData.swift in Sources */,
 				8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */,
 				8A363940296D35D7006FBC96 /* CreateRegistrationResponse.swift in Sources */,

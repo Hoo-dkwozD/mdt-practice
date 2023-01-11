@@ -30,7 +30,7 @@ class APICaller {
                 urlRequest.setValue(headerValue, forHTTPHeaderField: headerName)
             }
         }
-        if requestBody is EmptyData {
+        if !(requestBody is EmptyData) {
             do {
                 urlRequest.httpBody = try JSONEncoder().encode(requestBody)
                 urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
