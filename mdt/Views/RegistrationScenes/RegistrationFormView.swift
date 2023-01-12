@@ -17,8 +17,8 @@ struct RegistrationFormView: View {
     var body: some View {
         VStack {
             GeneralTextFieldView(label: "Username", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $registrationDetails.username)
-            GeneralTextFieldView(label: "Password", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $registrationDetails.password)
-            GeneralTextFieldView(label: "Confirm Password", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $confirmPassword)
+            GeneralSecureFieldView(label: "Password", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $registrationDetails.password)
+            GeneralSecureFieldView(label: "Confirm Password", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $confirmPassword)
             if (isError) {
                 Text("Username already taken, please use another username. ")
                     .font(.caption)

@@ -14,7 +14,7 @@ struct LoginFormView: View {
     var body: some View {
         VStack(alignment: .leading) {
             GeneralTextFieldView(label: "Username", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $loginDetails.username)
-            GeneralTextFieldView(label: "Password", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $loginDetails.password)
+            GeneralSecureFieldView(label: "Password", labelColor: Theme.black.mainColor.opacity(0.8), textColor: Theme.darkBlue.mainColor, borderColor: Theme.black.mainColor.opacity(0.5), value: $loginDetails.password)
             if (isError) {
                 Text("Incorrect credentials. ")
                     .font(.caption)

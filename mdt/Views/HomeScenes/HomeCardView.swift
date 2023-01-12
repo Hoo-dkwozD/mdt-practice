@@ -30,6 +30,7 @@ struct HomeCardView: View {
                             .fontWeight(.bold)
                     }
                 }
+                .padding(.bottom, 10)
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Account No.")

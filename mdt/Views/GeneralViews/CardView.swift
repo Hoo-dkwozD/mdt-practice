@@ -15,27 +15,30 @@ struct CardView<Content: View>: View {
     var body: some View {
         if (backgroundColors.count == 0) {
             content
-            .padding(10)
+            .padding(15)
             .frame(maxWidth: .infinity)
             .foregroundColor(textColor)
             .background(Theme.white.mainColor)
             .cornerRadius(15)
+            .shadow(color: Theme.black.mainColor.opacity(0.25), radius: 2, x: 3, y: 5)
         } else if (backgroundColors.count == 1) {
             content
-            .padding(10)
+            .padding(15)
             .frame(maxWidth: .infinity)
             .foregroundColor(textColor)
             .background(backgroundColors[0])
             .cornerRadius(15)
+            .shadow(color: Theme.black.mainColor.opacity(0.25), radius: 2, x: 3, y: 5)
         } else {
             content
-            .padding(10)
+            .padding(15)
             .frame(maxWidth: .infinity)
             .foregroundColor(textColor)
             .background(
                 LinearGradient(gradient: Gradient(colors: backgroundColors), startPoint: .bottomLeading, endPoint: .topTrailing)
             )
             .cornerRadius(15)
+            .shadow(color: Theme.black.mainColor.opacity(0.25), radius: 2, x: 3, y: 5)
         }
     }
 }
