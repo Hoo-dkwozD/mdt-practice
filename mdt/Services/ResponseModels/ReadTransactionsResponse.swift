@@ -37,7 +37,8 @@ struct Transaction: Codable {
     let transactionDate: String
     let description: String
     let transactionType: String
-    let sender: Account
+    let receipient: Account?
+    let sender: Account?
     
     enum CodingKeys: String, CodingKey {
         case transactionId
@@ -45,6 +46,7 @@ struct Transaction: Codable {
         case transactionDate
         case description
         case transactionType
+        case receipient
         case sender
     }
 }

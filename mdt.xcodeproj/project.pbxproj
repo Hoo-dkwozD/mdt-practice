@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8A0E0C02296FB5F7005EC3A9 /* GeneralSecureFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C01296FB5F7005EC3A9 /* GeneralSecureFieldView.swift */; };
+		8A0E0C04296FDC6C005EC3A9 /* HomeTransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C03296FDC6C005EC3A9 /* HomeTransactionCardView.swift */; };
+		8A0E0C06296FDCA3005EC3A9 /* TransactionCardDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C05296FDCA3005EC3A9 /* TransactionCardDetail.swift */; };
+		8A0E0C082970087D005EC3A9 /* HomeTransactionCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C072970087D005EC3A9 /* HomeTransactionCardsView.swift */; };
 		8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36392D296D036B006FBC96 /* RegistrationFormView.swift */; };
 		8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363934296D107B006FBC96 /* MdtAPIService.swift */; };
 		8A363938296D1191006FBC96 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363937296D1191006FBC96 /* APICaller.swift */; };
@@ -20,7 +23,7 @@
 		8A363947296D6E8F006FBC96 /* ReadBalanceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363946296D6E8E006FBC96 /* ReadBalanceResponse.swift */; };
 		8A363949296D6FA0006FBC96 /* ReadPayeesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363948296D6FA0006FBC96 /* ReadPayeesResponse.swift */; };
 		8A36394B296D7075006FBC96 /* ReadTransactionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36394A296D7075006FBC96 /* ReadTransactionsResponse.swift */; };
-		8A4D3F83296E4AD000848823 /* HomeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F82296E4AD000848823 /* HomeCardView.swift */; };
+		8A4D3F83296E4AD000848823 /* HomeMainCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F82296E4AD000848823 /* HomeMainCardView.swift */; };
 		8A4D3F88296E50A000848823 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F87296E50A000848823 /* CardView.swift */; };
 		8A4D3F8A296E5A1800848823 /* ViewUsageError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F89296E5A1800848823 /* ViewUsageError.swift */; };
 		8A4D3F8C296E6AF400848823 /* EmptyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4D3F8B296E6AF400848823 /* EmptyData.swift */; };
@@ -68,6 +71,9 @@
 
 /* Begin PBXFileReference section */
 		8A0E0C01296FB5F7005EC3A9 /* GeneralSecureFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSecureFieldView.swift; sourceTree = "<group>"; };
+		8A0E0C03296FDC6C005EC3A9 /* HomeTransactionCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTransactionCardView.swift; sourceTree = "<group>"; };
+		8A0E0C05296FDCA3005EC3A9 /* TransactionCardDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCardDetail.swift; sourceTree = "<group>"; };
+		8A0E0C072970087D005EC3A9 /* HomeTransactionCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTransactionCardsView.swift; sourceTree = "<group>"; };
 		8A36392D296D036B006FBC96 /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		8A363934296D107B006FBC96 /* MdtAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdtAPIService.swift; sourceTree = "<group>"; };
 		8A363937296D1191006FBC96 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -80,7 +86,7 @@
 		8A363946296D6E8E006FBC96 /* ReadBalanceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadBalanceResponse.swift; sourceTree = "<group>"; };
 		8A363948296D6FA0006FBC96 /* ReadPayeesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadPayeesResponse.swift; sourceTree = "<group>"; };
 		8A36394A296D7075006FBC96 /* ReadTransactionsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadTransactionsResponse.swift; sourceTree = "<group>"; };
-		8A4D3F82296E4AD000848823 /* HomeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCardView.swift; sourceTree = "<group>"; };
+		8A4D3F82296E4AD000848823 /* HomeMainCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainCardView.swift; sourceTree = "<group>"; };
 		8A4D3F87296E50A000848823 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8A4D3F89296E5A1800848823 /* ViewUsageError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUsageError.swift; sourceTree = "<group>"; };
 		8A4D3F8B296E6AF400848823 /* EmptyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyData.swift; sourceTree = "<group>"; };
@@ -179,8 +185,10 @@
 		8A363943296D4FF2006FBC96 /* HomeScenes */ = {
 			isa = PBXGroup;
 			children = (
-				8A4D3F82296E4AD000848823 /* HomeCardView.swift */,
+				8A4D3F82296E4AD000848823 /* HomeMainCardView.swift */,
 				8A363944296D5002006FBC96 /* HomeView.swift */,
+				8A0E0C072970087D005EC3A9 /* HomeTransactionCardsView.swift */,
+				8A0E0C03296FDC6C005EC3A9 /* HomeTransactionCardView.swift */,
 			);
 			path = HomeScenes;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 				8AB8A7BB2968142700917FDC /* CarouselIndex.swift */,
 				8AB8A7D3296C1F5000917FDC /* LoginDetails.swift */,
 				8A363941296D4CF2006FBC96 /* GlobalStates.swift */,
+				8A0E0C05296FDCA3005EC3A9 /* TransactionCardDetail.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -474,12 +483,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A0E0C04296FDC6C005EC3A9 /* HomeTransactionCardView.swift in Sources */,
 				8AB8A7BF29681BE500917FDC /* PreviewContentData.swift in Sources */,
 				8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */,
 				8A363940296D35D7006FBC96 /* CreateRegistrationResponse.swift in Sources */,
 				8AB8A7B22967D8A200917FDC /* PreviewMainContentView.swift in Sources */,
 				8AB8A7C6296BAF0000917FDC /* TopButtonView.swift in Sources */,
-				8A4D3F83296E4AD000848823 /* HomeCardView.swift in Sources */,
+				8A4D3F83296E4AD000848823 /* HomeMainCardView.swift in Sources */,
 				8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */,
 				8AB8A7CC296BFCB100917FDC /* RegistrationView.swift in Sources */,
 				8A36393C296D3558006FBC96 /* CreateLoginResponse.swift in Sources */,
@@ -497,9 +507,11 @@
 				8AB8A7B82967E0BC00917FDC /* PreviewsView.swift in Sources */,
 				8A363945296D5002006FBC96 /* HomeView.swift in Sources */,
 				8AB8A7BC2968142800917FDC /* CarouselIndex.swift in Sources */,
+				8A0E0C082970087D005EC3A9 /* HomeTransactionCardsView.swift in Sources */,
 				8AB8A7BA2967E1CB00917FDC /* PreviewContent.swift in Sources */,
 				8A0E0C02296FB5F7005EC3A9 /* GeneralSecureFieldView.swift in Sources */,
 				8AB8A7D0296C012900917FDC /* GeneralTextFieldView.swift in Sources */,
+				8A0E0C06296FDCA3005EC3A9 /* TransactionCardDetail.swift in Sources */,
 				8A363942296D4CF2006FBC96 /* GlobalStates.swift in Sources */,
 				8AB8A7CA296BCE6D00917FDC /* TopBarTrailingView.swift in Sources */,
 				8A36394B296D7075006FBC96 /* ReadTransactionsResponse.swift in Sources */,

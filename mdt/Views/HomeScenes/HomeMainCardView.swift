@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HomeCardView: View {
+struct HomeMainCardView: View {
     let bottomColor: Theme
     let topColor: Theme
     let username: String
@@ -60,6 +60,6 @@ struct HomeCardView: View {
 
 struct HomeCardView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeCardView(bottomColor: Theme.lightBlue, topColor: Theme.blue, username: "Test", accountNo: "123", balance: .constant(1000.0))
+        HomeMainCardView(bottomColor: Theme.lightBlue, topColor: Theme.blue, username: "Test", accountNo: "123", balance: .constant(1000.0))
     }
 }
