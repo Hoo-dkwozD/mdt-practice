@@ -24,7 +24,7 @@ struct NavBarButtonView: View {
                             .fill(Theme.base.mainColor)
                     )
                     .padding(.vertical, 20)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 15)
             } else if (btnColor.count == 1) {
                 Image(btnIcon)
                     .foregroundColor(btnColor[0].accentColor)
@@ -35,7 +35,7 @@ struct NavBarButtonView: View {
                             .fill(btnColor[0].mainColor)
                     )
                     .padding(.vertical, 20)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 15)
             } else {
                 Image(btnIcon)
                     .foregroundColor(btnColor[0].accentColor)
@@ -54,7 +54,7 @@ struct NavBarButtonView: View {
                             )
                     )
                     .padding(.vertical, 20)
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 15)
             }
         }
     }

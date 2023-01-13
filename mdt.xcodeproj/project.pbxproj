@@ -14,6 +14,7 @@
 		8A0E0C0A2970F154005EC3A9 /* NavBarButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C092970F154005EC3A9 /* NavBarButtonView.swift */; };
 		8A0E0C0C2970F582005EC3A9 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C0B2970F582005EC3A9 /* NavBarView.swift */; };
 		8A0E0C0E2970FEF8005EC3A9 /* NavBarButtonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C0D2970FEF8005EC3A9 /* NavBarButtonDetail.swift */; };
+		8A0E0C1129711681005EC3A9 /* PayeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C1029711681005EC3A9 /* PayeesView.swift */; };
 		8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36392D296D036B006FBC96 /* RegistrationFormView.swift */; };
 		8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363934296D107B006FBC96 /* MdtAPIService.swift */; };
 		8A363938296D1191006FBC96 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363937296D1191006FBC96 /* APICaller.swift */; };
@@ -80,6 +81,7 @@
 		8A0E0C092970F154005EC3A9 /* NavBarButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtonView.swift; sourceTree = "<group>"; };
 		8A0E0C0B2970F582005EC3A9 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		8A0E0C0D2970FEF8005EC3A9 /* NavBarButtonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtonDetail.swift; sourceTree = "<group>"; };
+		8A0E0C1029711681005EC3A9 /* PayeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeesView.swift; sourceTree = "<group>"; };
 		8A36392D296D036B006FBC96 /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		8A363934296D107B006FBC96 /* MdtAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdtAPIService.swift; sourceTree = "<group>"; };
 		8A363937296D1191006FBC96 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -149,6 +151,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A0E0C0F297112C5005EC3A9 /* PayeesScenes */ = {
+			isa = PBXGroup;
+			children = (
+				8A0E0C1029711681005EC3A9 /* PayeesView.swift */,
+			);
+			path = PayeesScenes;
+			sourceTree = "<group>";
+		};
 		8A363931296D0FE0006FBC96 /* Static */ = {
 			isa = PBXGroup;
 			children = (
@@ -270,6 +280,7 @@
 		8AB8A76429665FFE00917FDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A0E0C0F297112C5005EC3A9 /* PayeesScenes */,
 				8A363943296D4FF2006FBC96 /* HomeScenes */,
 				8AB8A7C2296BA8B900917FDC /* GeneralViews */,
 				8AB8A7C12968216200917FDC /* RegistrationScenes */,
@@ -517,6 +528,7 @@
 				8AB8A7D2296C1F0700917FDC /* LoginFormView.swift in Sources */,
 				8AB8A7B82967E0BC00917FDC /* PreviewsView.swift in Sources */,
 				8A363945296D5002006FBC96 /* HomeView.swift in Sources */,
+				8A0E0C1129711681005EC3A9 /* PayeesView.swift in Sources */,
 				8AB8A7BC2968142800917FDC /* CarouselIndex.swift in Sources */,
 				8A0E0C082970087D005EC3A9 /* HomeTransactionCardsView.swift in Sources */,
 				8AB8A7BA2967E1CB00917FDC /* PreviewContent.swift in Sources */,

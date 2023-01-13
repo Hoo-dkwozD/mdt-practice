@@ -143,7 +143,7 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .padding(.horizontal, 50)
                 }
-                NavigationLink(destination: Text("payees"), isActive: $isPayeesScene) {
+                NavigationLink(destination: PayeesView(), isActive: $isPayeesScene) {
                     EmptyView()
                 }
                 NavigationLink(destination: Text("transfer"), isActive: $isTransferScene) {
@@ -151,7 +151,7 @@ struct HomeView: View {
                 }
                 NavBarView(
                     navBarButtonDetails: [
-                        NavBarButtonDetail(btnAction: goToPayeesScene, btnIcon: "Payees", btnColor: [Theme.base]),
+                        NavBarButtonDetail(btnAction: goToPayeesScene, btnIcon: "Payees", btnColor: [Theme.white]),
                         NavBarButtonDetail(btnAction: goToTransferScene, btnIcon: "Transfer", btnColor: [Theme.lightBlue, Theme.blue])
                     ]
                 )
