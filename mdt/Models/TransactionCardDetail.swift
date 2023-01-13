@@ -52,6 +52,13 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    func getDatetimeDescription() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "E, dd MMM yyyy, h:mm a"
+        
+        return dateFormatter.string(from: self)
+    }
+    
     func getDateOnly() -> Date? {
         let x: Set<Calendar.Component> = [.year, .month, .day, .hour, .minute, .second]
         let cal = Calendar.current

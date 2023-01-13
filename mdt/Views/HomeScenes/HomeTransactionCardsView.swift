@@ -15,8 +15,12 @@ struct HomeTransactionCardsView: View {
     var body: some View {
         VStack {
             ForEach($transactionCardDetails, id: \.date) { transactionCardDetail in
-                HomeTransactionCardView(backgroundColor: backgroundColor, textColor: textColor, transactionCardDetail: transactionCardDetail)
-                    .padding(.bottom, 10)
+                NavigationLink(
+                    destination: FullTransactionsView(groupedTransactionHistory: [transactionCardDetail.wrappedValue])
+                ) {
+                    HomeTransactionCardView(backgroundColor: backgroundColor, textColor: textColor, transactionCardDetail: transactionCardDetail)
+                        .padding(.bottom, 10)
+                }
             }
         }
     }

@@ -12,6 +12,7 @@ struct HomeView: View {
     @State var transactionHistory: [Transaction] = []
     @State var formattedTransactionHistory: [TransactionCardDetail] = []
     @State var isLoadedTransactionHistory = false
+    @State var isFullTransactionsScene = false
     @State var isPayeesScene = false
     @State var isTransferScene = false
     
@@ -128,9 +129,12 @@ struct HomeView: View {
                         Text("Transaction History")
                             .font(.title)
                             .fontWeight(.bold)
+                        NavigationLink(destination: FullTransactionsView(groupedTransactionHistory: formattedTransactionHistory), isActive: $isFullTransactionsScene) {
+                            EmptyView()
+                        }
                         HStack {
                             Spacer()
-                            Button(action: {}) {
+                            Button(action: { isFullTransactionsScene = true }) {
                                 Text("See All")
                                     .underline()
                                     .foregroundColor(Theme.black.mainColor)

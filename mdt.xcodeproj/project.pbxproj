@@ -16,6 +16,8 @@
 		8A0E0C0E2970FEF8005EC3A9 /* NavBarButtonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C0D2970FEF8005EC3A9 /* NavBarButtonDetail.swift */; };
 		8A0E0C1129711681005EC3A9 /* PayeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C1029711681005EC3A9 /* PayeesView.swift */; };
 		8A0E0C132971306D005EC3A9 /* GeneralBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */; };
+		8A0E0C16297142C1005EC3A9 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C15297142C1005EC3A9 /* TransactionsView.swift */; };
+		8A0E0C182971535B005EC3A9 /* FullTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C172971535B005EC3A9 /* FullTransactionsView.swift */; };
 		8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36392D296D036B006FBC96 /* RegistrationFormView.swift */; };
 		8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363934296D107B006FBC96 /* MdtAPIService.swift */; };
 		8A363938296D1191006FBC96 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363937296D1191006FBC96 /* APICaller.swift */; };
@@ -84,6 +86,8 @@
 		8A0E0C0D2970FEF8005EC3A9 /* NavBarButtonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtonDetail.swift; sourceTree = "<group>"; };
 		8A0E0C1029711681005EC3A9 /* PayeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeesView.swift; sourceTree = "<group>"; };
 		8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBackgroundView.swift; sourceTree = "<group>"; };
+		8A0E0C15297142C1005EC3A9 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		8A0E0C172971535B005EC3A9 /* FullTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTransactionsView.swift; sourceTree = "<group>"; };
 		8A36392D296D036B006FBC96 /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		8A363934296D107B006FBC96 /* MdtAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdtAPIService.swift; sourceTree = "<group>"; };
 		8A363937296D1191006FBC96 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 		8A0E0C1429713495005EC3A9 /* TransactionsScenes */ = {
 			isa = PBXGroup;
 			children = (
+				8A0E0C15297142C1005EC3A9 /* TransactionsView.swift */,
+				8A0E0C172971535B005EC3A9 /* FullTransactionsView.swift */,
 			);
 			path = TransactionsScenes;
 			sourceTree = "<group>";
@@ -519,6 +525,7 @@
 				8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */,
 				8A363940296D35D7006FBC96 /* CreateRegistrationResponse.swift in Sources */,
 				8AB8A7B22967D8A200917FDC /* PreviewMainContentView.swift in Sources */,
+				8A0E0C16297142C1005EC3A9 /* TransactionsView.swift in Sources */,
 				8AB8A7C6296BAF0000917FDC /* TopButtonView.swift in Sources */,
 				8A4D3F83296E4AD000848823 /* HomeMainCardView.swift in Sources */,
 				8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */,
@@ -551,6 +558,7 @@
 				8A36394B296D7075006FBC96 /* ReadTransactionsResponse.swift in Sources */,
 				8AB8A73D2965822F00917FDC /* PreviewView.swift in Sources */,
 				8A36393E296D35C4006FBC96 /* CreateRegistrationData.swift in Sources */,
+				8A0E0C182971535B005EC3A9 /* FullTransactionsView.swift in Sources */,
 				8A0E0C0A2970F154005EC3A9 /* NavBarButtonView.swift in Sources */,
 				8A0E0C132971306D005EC3A9 /* GeneralBackgroundView.swift in Sources */,
 				8AB8A7C8296BCC4B00917FDC /* TopBarLeadingView.swift in Sources */,
