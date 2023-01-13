@@ -37,7 +37,7 @@ struct LoginView: View {
     }
     
     var body: some View {
-        ZStack {
+        GeneralBackgroundView {
             VStack(alignment: .leading) {
                 NavigationLink(destination: HomeView(), isActive: $isGotoHome) {
                     EmptyView()
@@ -54,12 +54,7 @@ struct LoginView: View {
                 Spacer()
                 BottomButtonView(targetIndex: $targetIndex, buttonColor: Theme.darkBlue, isDisabled: isDisabledBtn, bottomButtonText: "Login", bottomButtonAction: loginOnClick)
             }
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 40)
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
-        .background(Theme.base.mainColor)
     }
 }
 

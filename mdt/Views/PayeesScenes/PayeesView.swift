@@ -28,7 +28,7 @@ struct PayeesView: View {
     }
     
     var body: some View {
-        ZStack {
+        GeneralBackgroundView {
             VStack {
                 TopBarLeadingView(
                     buttonAction: { self.presentationMode.wrappedValue.dismiss() },
@@ -72,12 +72,7 @@ struct PayeesView: View {
                     }
                 }
             }
-            .frame(maxWidth: .infinity)
-            .padding(.horizontal, 40)
         }
-        .navigationBarTitle("")
-        .navigationBarHidden(true)
-        .background(Theme.base.mainColor)
         .onAppear(perform: loadPayees)
     }
 }

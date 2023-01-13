@@ -51,6 +51,12 @@ struct Transaction: Codable {
     }
 }
 
+extension Transaction: Equatable {
+    static func ==(left: Transaction, right: Transaction) -> Bool {
+        return (left.transactionId == right.transactionId)
+    }
+}
+
 struct Account: Codable {
     let accountNo: String
     let accountHolder: String

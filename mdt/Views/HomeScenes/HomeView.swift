@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     @State var balance: Double = 0.0
-    @State var transactionHistory: [TransactionCardDetail] = []
+    @State var transactionHistory: [Transaction] = []
+    @State var formattedTransactionHistory: [TransactionCardDetail] = []
     @State var isLoadedTransactionHistory = false
     @State var isPayeesScene = false
     @State var isTransferScene = false
@@ -19,6 +20,65 @@ struct HomeView: View {
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var globalStates: GlobalStates
+    
+    func formatTransactionHistory(transactions: [Transaction]) -> [TransactionCardDetail] {
+        var transactionsGroupedByDay: Dictionary<Date, [TransactionDetail]> = [:]
+        var newTransactionHistory: [TransactionCardDetail] = []
+        
+        for transaction in transactions {
+            let date = TransactionCardDetail
+                .getDateFromString(dateString: transaction.transactionDate, dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
+            let key = date?.getDateOnly()
+            
+            if (key == nil) {
+                continue
+            }
+            
+            if (transactionsGroupedByDay[key!] == nil) {
+                if (transaction.receipient != nil) {
+                    transactionsGroupedByDay[key!] = [
+                        TransactionDetail(
+                            transactionId: transaction.transactionId, username: transaction.receipient!.accountHolder, accountNo: transaction.receipient!.accountNo, amount: -(transaction.amount), transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType
+                        )
+                    ]
+                } else {
+                    transactionsGroupedByDay[key!] = [
+                        TransactionDetail(
+                            transactionId: transaction.transactionId, username: transaction.sender!.accountHolder, accountNo: transaction.sender!.accountNo, amount: transaction.amount, transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType
+                        )
+                    ]
+                }
+            } else {
+                if (transaction.receipient != nil) {
+                    transactionsGroupedByDay[key!]!.append(
+                        TransactionDetail(transactionId: transaction.transactionId, username: transaction.receipient!.accountHolder, accountNo: transaction.receipient!.accountNo, amount: -(transaction.amount), transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType)
+                    )
+                } else {
+                    transactionsGroupedByDay[key!]!.append(
+                        TransactionDetail(transactionId: transaction.transactionId, username: transaction.sender!.accountHolder, accountNo: transaction.sender!.accountNo, amount: transaction.amount, transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType)
+                    )
+                }
+            }
+        }
+        
+        for key in transactionsGroupedByDay.keys {
+            var groupedTransactions = transactionsGroupedByDay[key]!
+            groupedTransactions.sort {
+                $0.transactionDate > $1.transactionDate
+            }
+            
+            newTransactionHistory.append(
+                TransactionCardDetail(date: key, transactionDetails: groupedTransactions)
+            )
+        }
+        
+        newTransactionHistory.sort {
+            $0.date > $1.date
+        }
+        
+        isLoadedTransactionHistory = true
+        return newTransactionHistory
+    }
     
     func fillBalance() -> Void {
         guard globalStates.APIToken != nil else { return self.presentationMode.wrappedValue.dismiss() }
@@ -40,63 +100,7 @@ struct HomeView: View {
         MdtAPIService.shared.readTransactions(token: globalStates.APIToken!) { response in
             if (response.isSuccessful()) {
                 DispatchQueue.main.async {
-                    let transactions = response.data!
-                    var transactionsGroupedByDay: Dictionary<Date, [TransactionDetail]> = [:]
-                    var newTransactionHistory: [TransactionCardDetail] = []
-                    
-                    for transaction in transactions {
-                        let date = TransactionCardDetail
-                            .getDateFromString(dateString: transaction.transactionDate, dateFormat: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'")
-                        let key = date?.getDateOnly()
-                        
-                        if (key == nil) {
-                            continue
-                        }
-                        
-                        if (transactionsGroupedByDay[key!] == nil) {
-                            if (transaction.receipient != nil) {
-                                transactionsGroupedByDay[key!] = [
-                                    TransactionDetail(
-                                        transactionId: transaction.transactionId, username: transaction.receipient!.accountHolder, accountNo: transaction.receipient!.accountNo, amount: -(transaction.amount), transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType
-                                    )
-                                ]
-                            } else {
-                                transactionsGroupedByDay[key!] = [
-                                    TransactionDetail(
-                                        transactionId: transaction.transactionId, username: transaction.sender!.accountHolder, accountNo: transaction.sender!.accountNo, amount: transaction.amount, transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType
-                                    )
-                                ]
-                            }
-                        } else {
-                            if (transaction.receipient != nil) {
-                                transactionsGroupedByDay[key!]!.append(
-                                    TransactionDetail(transactionId: transaction.transactionId, username: transaction.receipient!.accountHolder, accountNo: transaction.receipient!.accountNo, amount: -(transaction.amount), transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType)
-                                )
-                            } else {
-                                transactionsGroupedByDay[key!]!.append(
-                                    TransactionDetail(transactionId: transaction.transactionId, username: transaction.sender!.accountHolder, accountNo: transaction.sender!.accountNo, amount: transaction.amount, transactionDate: date ?? Date(), description: transaction.description, transactionType: transaction.transactionType)
-                                )
-                            }
-                        }
-                    }
-                    
-                    for key in transactionsGroupedByDay.keys {
-                        var groupedTransactions = transactionsGroupedByDay[key]!
-                        groupedTransactions.sort {
-                            $0.transactionDate > $1.transactionDate
-                        }
-                        
-                        newTransactionHistory.append(
-                            TransactionCardDetail(date: key, transactionDetails: groupedTransactions)
-                        )
-                    }
-                    
-                    newTransactionHistory.sort {
-                        $0.date > $1.date
-                    }
-                    
-                    transactionHistory = newTransactionHistory
-                    isLoadedTransactionHistory = true
+                    transactionHistory = response.data ?? []
                 }
             } else {
                 self.presentationMode.wrappedValue.dismiss()
@@ -134,14 +138,14 @@ struct HomeView: View {
                         }
                         .padding(.bottom, 5)
                         if (isLoadedTransactionHistory) {
-                            HomeTransactionCardsView(backgroundColor: transactionBackgroundColor, textColor: transactionTextColor, transactionCardDetails: $transactionHistory)
+                            HomeTransactionCardsView(backgroundColor: transactionBackgroundColor, textColor: transactionTextColor, transactionCardDetails: formattedTransactionHistory)
                                 .padding(.bottom, 30)
                         } else {
                             Spacer()
                         }
                     }
                     .frame(maxWidth: .infinity)
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 40)
                 }
                 NavigationLink(destination: PayeesView(), isActive: $isPayeesScene) {
                     EmptyView()
@@ -163,6 +167,9 @@ struct HomeView: View {
         .onAppear {
             fillBalance()
             populateTransactionHistory()
+        }
+        .onChange(of: transactionHistory) { newTransactionHistory in
+            formattedTransactionHistory = formatTransactionHistory(transactions: newTransactionHistory)
         }
     }
 }

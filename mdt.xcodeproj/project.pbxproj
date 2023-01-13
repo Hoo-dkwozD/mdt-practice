@@ -15,6 +15,7 @@
 		8A0E0C0C2970F582005EC3A9 /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C0B2970F582005EC3A9 /* NavBarView.swift */; };
 		8A0E0C0E2970FEF8005EC3A9 /* NavBarButtonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C0D2970FEF8005EC3A9 /* NavBarButtonDetail.swift */; };
 		8A0E0C1129711681005EC3A9 /* PayeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C1029711681005EC3A9 /* PayeesView.swift */; };
+		8A0E0C132971306D005EC3A9 /* GeneralBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */; };
 		8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36392D296D036B006FBC96 /* RegistrationFormView.swift */; };
 		8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363934296D107B006FBC96 /* MdtAPIService.swift */; };
 		8A363938296D1191006FBC96 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363937296D1191006FBC96 /* APICaller.swift */; };
@@ -82,6 +83,7 @@
 		8A0E0C0B2970F582005EC3A9 /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		8A0E0C0D2970FEF8005EC3A9 /* NavBarButtonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarButtonDetail.swift; sourceTree = "<group>"; };
 		8A0E0C1029711681005EC3A9 /* PayeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeesView.swift; sourceTree = "<group>"; };
+		8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBackgroundView.swift; sourceTree = "<group>"; };
 		8A36392D296D036B006FBC96 /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		8A363934296D107B006FBC96 /* MdtAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdtAPIService.swift; sourceTree = "<group>"; };
 		8A363937296D1191006FBC96 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -157,6 +159,13 @@
 				8A0E0C1029711681005EC3A9 /* PayeesView.swift */,
 			);
 			path = PayeesScenes;
+			sourceTree = "<group>";
+		};
+		8A0E0C1429713495005EC3A9 /* TransactionsScenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TransactionsScenes;
 			sourceTree = "<group>";
 		};
 		8A363931296D0FE0006FBC96 /* Static */ = {
@@ -280,6 +289,7 @@
 		8AB8A76429665FFE00917FDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A0E0C1429713495005EC3A9 /* TransactionsScenes */,
 				8A0E0C0F297112C5005EC3A9 /* PayeesScenes */,
 				8A363943296D4FF2006FBC96 /* HomeScenes */,
 				8AB8A7C2296BA8B900917FDC /* GeneralViews */,
@@ -363,6 +373,7 @@
 				8A4D3F87296E50A000848823 /* CardView.swift */,
 				8A0E0C092970F154005EC3A9 /* NavBarButtonView.swift */,
 				8A0E0C0B2970F582005EC3A9 /* NavBarView.swift */,
+				8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */,
 			);
 			path = GeneralViews;
 			sourceTree = "<group>";
@@ -541,6 +552,7 @@
 				8AB8A73D2965822F00917FDC /* PreviewView.swift in Sources */,
 				8A36393E296D35C4006FBC96 /* CreateRegistrationData.swift in Sources */,
 				8A0E0C0A2970F154005EC3A9 /* NavBarButtonView.swift in Sources */,
+				8A0E0C132971306D005EC3A9 /* GeneralBackgroundView.swift in Sources */,
 				8AB8A7C8296BCC4B00917FDC /* TopBarLeadingView.swift in Sources */,
 				8A363949296D6FA0006FBC96 /* ReadPayeesResponse.swift in Sources */,
 				8AB8A7C4296BA99F00917FDC /* LoginView.swift in Sources */,

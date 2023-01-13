@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeTransactionCardsView: View {
     var backgroundColor: Color
     var textColor: Color
-    @Binding var transactionCardDetails: [TransactionCardDetail]
+    @State var transactionCardDetails: [TransactionCardDetail]
     
     var body: some View {
         VStack {
@@ -24,6 +24,6 @@ struct HomeTransactionCardsView: View {
 
 struct HomeTransactionCardsView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeTransactionCardsView(backgroundColor: Theme.white.mainColor, textColor: Theme.black.mainColor.opacity(0.8), transactionCardDetails: .constant(TransactionCardDetail.sampleData))
+        HomeTransactionCardsView(backgroundColor: Theme.white.mainColor, textColor: Theme.black.mainColor.opacity(0.8), transactionCardDetails: TransactionCardDetail.sampleData)
     }
 }
