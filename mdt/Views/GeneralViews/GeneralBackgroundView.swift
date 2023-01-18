@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct GeneralBackgroundView<Content: View>: View {
-    @ViewBuilder var content: Content
+    @State var isLoading = false
+    
+    @ViewBuilder var content: (Binding<Bool>) -> Content
     
     var body: some View {
         ZStack {
-            content
+            content($isLoading)
             .frame(maxWidth: .infinity)
             .padding(.horizontal, 40)
+            if (isLoading) {
+                VStack {
+                    Spacer()
+                    Text("Loading... ")
+                        .foregroundColor(Theme.white.mainColor)
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .background(Theme.gray.mainColor.opacity(0.8))
+            }
         }
         .navigationBarTitle("")
         .navigationBarHidden(true)
@@ -25,7 +37,7 @@ struct GeneralBackgroundView<Content: View>: View {
 struct GeneralBackgroundView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            GeneralBackgroundView {
+            GeneralBackgroundView { isLoading in
                 Text("Test")
             }
         }

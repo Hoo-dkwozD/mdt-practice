@@ -14,7 +14,7 @@ struct TransactionsView: View {
     @EnvironmentObject var globalStates: GlobalStates
     
     var body: some View {
-        GeneralBackgroundView {
+        GeneralBackgroundView { isLoading in 
             VStack {
                 TopBarLeadingView(buttonAction: { self.presentationMode.wrappedValue.dismiss() }, buttonIconName: "BackArrow", barText: "Transaction History")
                 ScrollView {

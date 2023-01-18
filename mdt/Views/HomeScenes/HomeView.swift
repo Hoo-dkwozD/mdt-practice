@@ -154,7 +154,7 @@ struct HomeView: View {
                 NavigationLink(destination: PayeesView(), isActive: $isPayeesScene) {
                     EmptyView()
                 }
-                NavigationLink(destination: Text("transfer"), isActive: $isTransferScene) {
+                NavigationLink(destination: TransferView(), isActive: $isTransferScene) {
                     EmptyView()
                 }
                 NavBarView(

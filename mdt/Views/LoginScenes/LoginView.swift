@@ -19,25 +19,30 @@ struct LoginView: View {
         !loginDetails.isFilled()
     }
     
-    func loginOnClick() -> Void {
+    func loginOnClick(isLoading: Binding<Bool>) -> Void {
         guard !isDisabledBtn else { return }
         
         isError = false
+        
+        isLoading.wrappedValue = true
 
         MdtAPIService.shared.createLogin(loginDetails: loginDetails, completion: { response in
             if (response.isSuccessful()) {
                 DispatchQueue.main.async {
+                    isLoading.wrappedValue = false
+                    
                     globalStates.update(APIToken: response.token!, accountNo: response.accountNo!, username: response.username!)
                 }
                 isGotoHome = true
             } else {
+                isLoading.wrappedValue = false
                 isError = true
             }
         })
     }
     
     var body: some View {
-        GeneralBackgroundView {
+        GeneralBackgroundView { isLoading in
             VStack(alignment: .leading) {
                 NavigationLink(destination: HomeView(), isActive: $isGotoHome) {
                     EmptyView()
@@ -52,7 +57,7 @@ struct LoginView: View {
                     .padding(.horizontal, 30)
                 LoginFormView(loginDetails: $loginDetails, isError: $isError)
                 Spacer()
-                BottomButtonView(targetIndex: $targetIndex, buttonColor: Theme.darkBlue, isDisabled: isDisabledBtn, bottomButtonText: "Login", bottomButtonAction: loginOnClick)
+                BottomButtonView(targetIndex: $targetIndex, buttonColor: Theme.darkBlue, isDisabled: isDisabledBtn, bottomButtonText: "Login", bottomButtonAction: { loginOnClick(isLoading: isLoading) })
             }
         }
     }

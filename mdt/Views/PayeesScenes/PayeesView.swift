@@ -28,7 +28,7 @@ struct PayeesView: View {
     }
     
     var body: some View {
-        GeneralBackgroundView {
+        GeneralBackgroundView { isLoading in 
             VStack {
                 TopBarLeadingView(
                     buttonAction: { self.presentationMode.wrappedValue.dismiss() },

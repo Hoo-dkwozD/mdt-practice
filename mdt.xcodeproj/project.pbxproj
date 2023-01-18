@@ -18,6 +18,11 @@
 		8A0E0C132971306D005EC3A9 /* GeneralBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */; };
 		8A0E0C16297142C1005EC3A9 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C15297142C1005EC3A9 /* TransactionsView.swift */; };
 		8A0E0C182971535B005EC3A9 /* FullTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C172971535B005EC3A9 /* FullTransactionsView.swift */; };
+		8A0E0C1D29715D52005EC3A9 /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C1C29715D52005EC3A9 /* TransferView.swift */; };
+		8A0E0C1F297160B5005EC3A9 /* RecipientCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C1E297160B5005EC3A9 /* RecipientCardView.swift */; };
+		8A0E0C232975555F005EC3A9 /* PayeesSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C222975555F005EC3A9 /* PayeesSearchView.swift */; };
+		8A0E0C252976A874005EC3A9 /* AmountInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C242976A874005EC3A9 /* AmountInputView.swift */; };
+		8A0E0C272976AC45005EC3A9 /* TransferDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0E0C262976AC45005EC3A9 /* TransferDescriptionView.swift */; };
 		8A36392E296D036B006FBC96 /* RegistrationFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A36392D296D036B006FBC96 /* RegistrationFormView.swift */; };
 		8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363934296D107B006FBC96 /* MdtAPIService.swift */; };
 		8A363938296D1191006FBC96 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A363937296D1191006FBC96 /* APICaller.swift */; };
@@ -88,6 +93,11 @@
 		8A0E0C122971306D005EC3A9 /* GeneralBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralBackgroundView.swift; sourceTree = "<group>"; };
 		8A0E0C15297142C1005EC3A9 /* TransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		8A0E0C172971535B005EC3A9 /* FullTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullTransactionsView.swift; sourceTree = "<group>"; };
+		8A0E0C1C29715D52005EC3A9 /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
+		8A0E0C1E297160B5005EC3A9 /* RecipientCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientCardView.swift; sourceTree = "<group>"; };
+		8A0E0C222975555F005EC3A9 /* PayeesSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayeesSearchView.swift; sourceTree = "<group>"; };
+		8A0E0C242976A874005EC3A9 /* AmountInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountInputView.swift; sourceTree = "<group>"; };
+		8A0E0C262976AC45005EC3A9 /* TransferDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferDescriptionView.swift; sourceTree = "<group>"; };
 		8A36392D296D036B006FBC96 /* RegistrationFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationFormView.swift; sourceTree = "<group>"; };
 		8A363934296D107B006FBC96 /* MdtAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MdtAPIService.swift; sourceTree = "<group>"; };
 		8A363937296D1191006FBC96 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
@@ -172,6 +182,18 @@
 				8A0E0C172971535B005EC3A9 /* FullTransactionsView.swift */,
 			);
 			path = TransactionsScenes;
+			sourceTree = "<group>";
+		};
+		8A0E0C1B29715D3C005EC3A9 /* TransferScenes */ = {
+			isa = PBXGroup;
+			children = (
+				8A0E0C1C29715D52005EC3A9 /* TransferView.swift */,
+				8A0E0C1E297160B5005EC3A9 /* RecipientCardView.swift */,
+				8A0E0C222975555F005EC3A9 /* PayeesSearchView.swift */,
+				8A0E0C242976A874005EC3A9 /* AmountInputView.swift */,
+				8A0E0C262976AC45005EC3A9 /* TransferDescriptionView.swift */,
+			);
+			path = TransferScenes;
 			sourceTree = "<group>";
 		};
 		8A363931296D0FE0006FBC96 /* Static */ = {
@@ -295,6 +317,7 @@
 		8AB8A76429665FFE00917FDC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8A0E0C1B29715D3C005EC3A9 /* TransferScenes */,
 				8A0E0C1429713495005EC3A9 /* TransactionsScenes */,
 				8A0E0C0F297112C5005EC3A9 /* PayeesScenes */,
 				8A363943296D4FF2006FBC96 /* HomeScenes */,
@@ -531,6 +554,7 @@
 				8A363935296D107B006FBC96 /* MdtAPIService.swift in Sources */,
 				8A0E0C0C2970F582005EC3A9 /* NavBarView.swift in Sources */,
 				8AB8A7CC296BFCB100917FDC /* RegistrationView.swift in Sources */,
+				8A0E0C1F297160B5005EC3A9 /* RecipientCardView.swift in Sources */,
 				8A36393C296D3558006FBC96 /* CreateLoginResponse.swift in Sources */,
 				8A4D3F8A296E5A1800848823 /* ViewUsageError.swift in Sources */,
 				8A4D3F88296E50A000848823 /* CardView.swift in Sources */,
@@ -542,8 +566,10 @@
 				8A36393A296D34C7006FBC96 /* CreateLoginData.swift in Sources */,
 				8A4D3F8C296E6AF400848823 /* EmptyData.swift in Sources */,
 				8AB8A7B62967DA3000917FDC /* BottomButtonView.swift in Sources */,
+				8A0E0C252976A874005EC3A9 /* AmountInputView.swift in Sources */,
 				8AB8A7D4296C1F5000917FDC /* LoginDetails.swift in Sources */,
 				8AB8A7D2296C1F0700917FDC /* LoginFormView.swift in Sources */,
+				8A0E0C232975555F005EC3A9 /* PayeesSearchView.swift in Sources */,
 				8AB8A7B82967E0BC00917FDC /* PreviewsView.swift in Sources */,
 				8A363945296D5002006FBC96 /* HomeView.swift in Sources */,
 				8A0E0C1129711681005EC3A9 /* PayeesView.swift in Sources */,
@@ -553,8 +579,10 @@
 				8A0E0C02296FB5F7005EC3A9 /* GeneralSecureFieldView.swift in Sources */,
 				8AB8A7D0296C012900917FDC /* GeneralTextFieldView.swift in Sources */,
 				8A0E0C06296FDCA3005EC3A9 /* TransactionCardDetail.swift in Sources */,
+				8A0E0C272976AC45005EC3A9 /* TransferDescriptionView.swift in Sources */,
 				8A363942296D4CF2006FBC96 /* GlobalStates.swift in Sources */,
 				8AB8A7CA296BCE6D00917FDC /* TopBarTrailingView.swift in Sources */,
+				8A0E0C1D29715D52005EC3A9 /* TransferView.swift in Sources */,
 				8A36394B296D7075006FBC96 /* ReadTransactionsResponse.swift in Sources */,
 				8AB8A73D2965822F00917FDC /* PreviewView.swift in Sources */,
 				8A36393E296D35C4006FBC96 /* CreateRegistrationData.swift in Sources */,
